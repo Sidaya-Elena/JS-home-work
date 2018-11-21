@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script>
+
+function getColor(){
+	var color = prompt('Хорошо!А какой цвет у твоего смартфона?', '');
+	if(color=='silver'){
+		document.write("<img src=silver.jpg>"); 
+	}
+	else if(color=='black'){
+		document.write("<img src=black.jpg>"); 
+	}
+	else if(color=='grey'){
+		document.write("<img src=grey.jpg>"); 
+	} 
+	else if(color=='gold'){
+		document.write("<img src=gold.jpg>"); 
+	}
+	else if(color==null){
+		alert('Хорошего дня!')
+	} else {
+		var choice =confirm('Такой цвет не найден:( Чтобы попробовать снова нажмите ОК либо нажмите ОТМЕНА');
+		if(choice==true){
+			getColor();
+		} else {
+			alert('До встречи!')
+		}
+	}
+};
+
+function memory() {
+	var memory = prompt('Итак, сколько памяти в твоём смартфоне?:)', '');
+	if(memory==16){
+		alert('8000');
+		getColor();
+	}
+	else if(memory==32){
+		alert('9000');
+		getColor();
+	}
+	else if(memory==64){
+		alert('10000');
+		getColor();
+	}
+	else if(memory==128){
+		alert('11000');
+		getColor();
+	}
+	else if(memory==256){
+		alert('12000');
+		getColor();
+	} 
+	else if(memory==null){
+		alert('Хорошего настроения!Пока:)');
+	}else{
+		error();
+	}
+};
+
+
+function error(){
+  	var error = confirm('Вы ничего не ввели или ввели неправильно.Чтобы ввести заново, нажмите ОК или ОТМЕНА для выхода.');
+	if(error ==true){
+		memory();
+	} else {
+		alert('До встречи!')
+	}
+};
+
+memory();
+
+
+
+
+
+  </script>
+  </body>
+  </html>
