@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script>
+
+function calculator(){
+var exit=true;
+var end=true;
+	while(exit){
+var firstNumber=prompt('Введите первое число','');
+	if ((firstNumber=='')||isNaN(firstNumber)){
+	   console.log('Вы ничего не ввели либо ввели не число');
+    } 
+    else if(firstNumber == null){ 
+       console.log('До свидания');
+       end=false;
+       break;
+	} else {
+	   exit=false;
+	}
+}
+	while(!exit){
+var secondNumber=prompt('Введите второе число','');
+	if ((secondNumber=='')||isNaN(secondNumber)){
+       console.log('Вы ничего не ввели либо ввели не число');
+     } 
+     else if(secondNumber == null){ 
+       console.log('До свидания');
+       end=false;
+       break;
+	} else {
+	   exit=true;
+ 	}
+}
+	while(end){
+var sign = prompt('Введите знак','');
+	 switch(sign){
+		case '+':
+			return Number(firstNumber)+Number(secondNumber);
+			break;
+		case '-':
+			return firstNumber-secondNumber;
+			break;
+		case '*':
+			return firstNumber*secondNumber;
+			break;
+		case '/':
+			return firstNumber/secondNumber;
+			break;
+		case null:
+			console.log('До свидания');
+			end=false;
+			break;
+		default:
+    		console.log( 'Неправильный знак' );
+    		end=true;
+		}
+	}
+}
+console.log(calculator());
+
+ </script>
+ 
+  
+  </body>
+  </html>
